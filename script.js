@@ -88,3 +88,24 @@ closeBtn.addEventListener('click', () =>
 document.addEventListener('keydown', e =>
   e.key === "Escape" ? document.getElementById('text-box').classList.remove('show') : false
 );
+
+//Store voices
+let voices = [];
+
+function getVoices() {
+  voices = speechSynthesis.getVoices();
+
+  voices.forEach(voice => {
+    const option = document.createElement('option');
+
+    option.value = voice.name;
+    option.innerText = `${voice.name} ${voice.lang}`;
+
+    voicesSelect.appendChild(option);
+  });
+}
+
+// Voices changed
+speechSynthesis.addEventListener('voiceschanged', getVoices);
+
+getVoices();
