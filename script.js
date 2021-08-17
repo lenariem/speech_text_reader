@@ -5,8 +5,7 @@ const readBtn = document.getElementById('read');
 const toggleBtn = document.getElementById('toggle');
 const closeBtn = document.getElementById('close');
 
-const data = [
-  {
+const data = [{
     image: './img/drink.jpg',
     text: "I'm Thirsty"
   },
@@ -60,8 +59,11 @@ data.forEach(createBox);
 
 // Create speech boxes
 function createBox(item) {
-  const { image, text } = item;
-  
+  const {
+    image,
+    text
+  } = item;
+
   const box = document.createElement('div');
 
   box.classList.add('box');
@@ -122,6 +124,11 @@ function setTextMessage(text) {
   message.text = text;
 }
 
+// Set voice
+function setVoice(e) {
+  message.voice = voices.find(voice => voice.name === e.target.value);
+}
+
 // Speak text
 function speakText() {
   speechSynthesis.speak(message);
@@ -129,5 +136,14 @@ function speakText() {
 
 // Voices changed
 speechSynthesis.addEventListener('voiceschanged', getVoices);
+
+// Change voice
+voicesSelect.addEventListener('change', setVoice);
+
+// Read customer text
+readBtn.addEventListener('click', () => {
+  setTextMessage(textarea.value);
+  speakText();
+});
 
 getVoices();
