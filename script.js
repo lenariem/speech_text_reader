@@ -74,3 +74,17 @@ function createBox(item) {
   main.appendChild(box);
 }
 
+// Toggle text box
+toggleBtn.addEventListener('click', () =>
+  document.getElementById('text-box').classList.toggle('show')
+);
+
+// Close button
+closeBtn.addEventListener('click', () =>
+  document.getElementById('text-box').classList.remove('show')
+);
+
+// Hide text box on Esc key click
+document.addEventListener('keydown', e =>
+  e.key === "Escape" ? document.getElementById('text-box').classList.remove('show') : false
+);
