@@ -1,11 +1,20 @@
-## Speech Text Reader
+# Speech Text Reader
 
-A text to speech app for non-verbal people. Pre-made buttons and custom text speech. This project uses the Web Speech API
+### A text to speech app for non-verbal people. Pre-made buttons and custom text speech. This project uses the Web Speech API
 
-## Project Specifications
+**to take a look please click this link:** 
 
-- Create responsive UI (CSS Grid) with picture buttons
-- Speaks the text when button clicked
-- Drop down custom text to speech
-- Speaks the text typed in
-- Change voices and accents
+https://lenariem.github.io/speech_text_reader/
+
+### Technologies used: 
+* JavaScript;
+* CSS, Grid, Media queries;
+* HTML;
+* Web Speech API;
+* responsive for different devices;
+
+### User can:
+* Speaks the text when button clicked
+* Drop down custom text to speech
+* Speaks the text typed in
+* Change voices and accents
