@@ -1,6 +1,6 @@
 # Speech Text Reader
 
-### A text to speech app for non-verbal people. Pre-made buttons and custom text speech. This project uses the Web Speech API
+### A text to speech app for non-verbal people
 
 **to take a look please click this link:** 
 
